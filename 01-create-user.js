@@ -13,9 +13,6 @@ La fonction doit retourner un objet contenant ces trois propriétés :
 */
 
 function createUser(nom, age, estConnecte) {
-    if(typeof nom !=='string' || nom === '' || typeof age !=='number'||isNaN(age) || typeof estConnecte !== "boolean"){
-        return null
-    }
     return{
         nom : nom,
         age : age,
