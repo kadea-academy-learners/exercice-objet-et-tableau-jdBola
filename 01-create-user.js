@@ -13,15 +13,22 @@ La fonction doit retourner un objet contenant ces trois propriétés :
 */
 
 function createUser(nom, age, estConnecte) {
-    return{
-        nom : nom,
-        age : age,
-        estConnecte : estConnecte
-    } 
+  if (typeof nom !== "string") {
+    return "Erreur : le nom doit être une chaîne de caractères.";
+  }
+  if (typeof age !== "number") {
+    return "Erreur : l'âge doit être un nombre.";
+  }
+  if (typeof estConnecte !== "boolean") {
+    return "Erreur : estConnecte doit être un booléen.";
+  }
+    return { nom, age, estConnecte };
 }
 
-const user = createUser('Booba', 45, true)
-console.log(user)
+console.log(createUser("Jean", 25, true));
+console.log(createUser("Sarah", "25", false));
+
+
 
 module.exports = {
     createUser,

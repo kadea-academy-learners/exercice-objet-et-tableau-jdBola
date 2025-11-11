@@ -4,12 +4,12 @@
 // - retourne un message "Réussi" si la moyenne est >= 10, sinon "Échoué"
 const notes = [10, 16, 7, 9,13]
 function averageNote(notes) {
-	  const total = notes.reduce((acc, note) => acc + note, 0);
-  		const moyenne = total / notes.length;
+	const total = notes.reduce((acc, note) => acc + note, 0);
+  	const moyenne = total / notes.length;
 
   		return moyenne >= 10 ? "Réussi" : "Échoué";
 }
-
+console.log(averageNote(notes))
 module.exports = {
 	averageNote,
 };
